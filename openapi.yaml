@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  version: 1.0.0
+paths:
+  /:
+      get:
+        summary: Welcome page
+        operationId: app.welcome_page
+        responses:
+          '200':
+            description: Welcome page
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    message:
+                      type: string
+  /hello:
+    get:
+      summary: Say hello
+      operationId: hello.hello
+      responses:
+        '200':
+          description: A greeting
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
